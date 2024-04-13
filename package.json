@@ -10,6 +10,7 @@
     "coverage": "vitest run --coverage",
     "format": "biome format ./src",
     "lint:ci": "biome ci src",
+    "typecheck": "tsc --noEmit --extendedDiagnostics",
     "prepare": "is-ci || husky"
   },
   "keywords": [],

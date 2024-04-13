@@ -4,6 +4,8 @@
     "target": "ESNext",
     // An array of library files to include in the compilation.
     "lib": ["ESNext"],
+    // Custom vitest typings
+    "types": ["vitest/globals"],
     // Allows JavaScript files to be included in the project.
     "allowJs": true,
     // Skips type checking of declaration files.
@@ -31,14 +33,14 @@
     // Transforms each file as a separate module, which can help catch more errors.
     "isolatedModules": true,
     // Specifies the base directory for resolving non-relative module names.
-    "baseUrl": ".",
+    "baseUrl": "./src",
     // Defines path mappings for module names.
     "paths": {
-      "@typings/*": ["src/typings/*"]
+      "@typings/*": ["typings/*"]
     }
   },
   // Specifies the files to include in the compilation.
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   // Specifies files to be excluded from the compilation.
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+  "exclude": ["node_modules"]
 }
