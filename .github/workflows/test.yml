@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+  push:
+    branches:
+      - "**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3.0.0
+        id: pnpm-install
+        with:
+          version: latest
+          run_install: false
+
+      - name: Setup Node.js lts/iron
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: lts/iron
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Run benchmark
+        run: pnpm bench
