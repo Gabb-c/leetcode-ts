@@ -8,9 +8,10 @@
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui --api 9527",
+    "bench": "vitest bench",
     "format": "biome format ./src",
     "lint:ci": "biome ci src",
-    "prepare": "husky"
+    "prepare": "is-ci || husky"
   },
   "keywords": [],
   "author": "",
