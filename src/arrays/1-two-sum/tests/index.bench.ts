@@ -1,15 +1,19 @@
-import { bench, describe, expect } from "vitest";
+import { bench, describe } from "vitest";
 
+import type { InputTestData } from "@typings/input-data";
 import { twoSum } from "..";
-import { TEST_DATA } from "./test-data";
+
+const TEST_DATA: InputTestData<{ nums: number[]; target: number }, number[]> = {
+  input: { nums: [2, 7, 11, 15], target: 9 },
+  expected: [0, 1],
+};
 
 describe("Two Sum (benchmark)", () => {
-  for (const {
+  const {
     input: { nums, target },
-    expected,
-  } of TEST_DATA) {
-    bench(`should find the indices of two numbers that add up to ${target}`, () => {
-      expect(twoSum(nums, target)).toEqual(expected);
-    });
-  }
+  } = TEST_DATA;
+
+  bench(`should find the indices of two numbers that add up to ${target}`, () => {
+    twoSum(nums, target);
+  });
 });

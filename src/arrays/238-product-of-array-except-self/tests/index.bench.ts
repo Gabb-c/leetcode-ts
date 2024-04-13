@@ -1,12 +1,16 @@
-import { bench, describe, expect } from "vitest";
+import { bench, describe } from "vitest";
 
+import type { InputTestData } from "@typings/input-data";
 import { productExceptSelf } from "..";
-import { TEST_DATA } from "./test-data";
+
+const TEST_DATA: InputTestData<number[], number[]> = {
+  input: [1, 2, 3, 4],
+  expected: [24, 12, 8, 6],
+};
 
 describe("Product of Array Except Self (benchmark)", () => {
-  for (const { input, expected } of TEST_DATA) {
-    bench(`should return the product of array except self for input [${input.join(",")}]`, () => {
-      expect(productExceptSelf(input)).toEqual(expected);
-    });
-  }
+  const { input } = TEST_DATA;
+  bench("should return the product of array except self", () => {
+    productExceptSelf(input);
+  });
 });
