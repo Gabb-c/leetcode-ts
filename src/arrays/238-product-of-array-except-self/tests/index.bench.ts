@@ -1,6 +1,6 @@
 import { bench, describe } from "vitest";
 
-import type { InputTestData } from "shared/typings/input-data";
+import type { InputTestData } from "@typings/input-data";
 import { productExceptSelf } from "..";
 
 const TEST_DATA: InputTestData<number[], number[]> = {

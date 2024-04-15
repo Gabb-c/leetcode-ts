@@ -1,4 +1,4 @@
-import type { LeetcodeProblem } from "shared/typings/leetcode-problem";
+import type { LeetcodeProblem } from "@typings/leetcode-problem";
 
 /**
  * Finds the indices of two numbers in an array that add up to a target sum.
@@ -59,7 +59,7 @@ const bruteForce = (nums: number[], target: number): number[] => {
   return [];
 };
 
-export const leetcodeProblem: LeetcodeProblem = {
+export const TWO_SUM: LeetcodeProblem<number[]> = {
   name: "1. Two Sum",
   code: "1",
   tags: ["Array"],

@@ -1,6 +1,6 @@
 import { bench, describe } from "vitest";
 
-import type { InputTestData } from "shared/typings/input-data";
+import type { InputTestData } from "@typings/input-data";
 import { maxProfit } from "..";
 
 const TEST_DATA: InputTestData<number[], number> = { input: [7, 1, 5, 3, 6, 4], expected: 5 };

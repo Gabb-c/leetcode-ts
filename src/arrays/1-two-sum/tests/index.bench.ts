@@ -1,9 +1,9 @@
 import { bench, describe } from "vitest";
 
-import { leetcodeProblem } from "..";
+import { TWO_SUM } from "..";
 import { TEST_DATA } from "./test-data";
 
-const { name, solutions } = leetcodeProblem;
+const { name, solutions } = TWO_SUM;
 
 describe(name, () => {
   for (const { name, implementation } of solutions) {
