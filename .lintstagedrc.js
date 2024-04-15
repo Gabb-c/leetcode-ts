@@ -3,4 +3,5 @@ export default {
     "biome check --apply-unsafe --no-errors-on-unmatched",
   ],
   "*.ts": ["vitest related --run"],
+  "docs/**/*": ["vitepress build docs"],
 };

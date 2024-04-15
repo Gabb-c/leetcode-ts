@@ -11,7 +11,10 @@
     "format": "biome format ./src",
     "lint:ci": "biome ci src",
     "typecheck": "tsc --noEmit --extendedDiagnostics",
-    "prepare": "is-ci || husky"
+    "prepare": "is-ci || husky",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +30,13 @@
     "is-ci": "^3.0.1",
     "typescript": "^5.4.5",
     "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^1.5.0"
+    "vitepress": "^1.1.0",
+    "vitest": "^1.5.0",
+    "vue": "^3.4.22"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["@algolia/client-search", "search-insights"]
+    }
   }
 }
