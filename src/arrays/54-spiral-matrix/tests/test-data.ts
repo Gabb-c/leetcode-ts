@@ -1,5 +1,5 @@
-import type { InputTestData } from "@typings/input-data"; // Assuming you have a types file
-import type { Matrix } from "@typings/matrix";
+import type { InputTestData } from "shared/typings/input-data"; // Assuming you have a types file
+import type { Matrix } from "shared/typings/matrix";
 
 export const TEST_DATA: InputTestData<Matrix<number>, number[]>[] = [
   {

@@ -36,7 +36,8 @@
     "baseUrl": "./src",
     // Defines path mappings for module names.
     "paths": {
-      "@typings/*": ["typings/*"]
+      "@typings/*": ["shared/typings/*"],
+      "@utils/*": ["shared/utils/*"]
     }
   },
   // Specifies the files to include in the compilation.

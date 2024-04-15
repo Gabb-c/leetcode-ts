@@ -1,19 +1,18 @@
 import { bench, describe } from "vitest";
 
-import type { InputTestData } from "@typings/input-data";
-import { twoSum } from "..";
+import { leetcodeProblem } from "..";
+import { TEST_DATA } from "./test-data";
 
-const TEST_DATA: InputTestData<{ nums: number[]; target: number }, number[]> = {
-  input: { nums: [2, 7, 11, 15], target: 9 },
-  expected: [0, 1],
-};
+const { name, solutions } = leetcodeProblem;
 
-describe("Two Sum (benchmark)", () => {
-  const {
-    input: { nums, target },
-  } = TEST_DATA;
-
-  bench(`should find the indices of two numbers that add up to ${target}`, () => {
-    twoSum(nums, target);
-  });
+describe(name, () => {
+  for (const { name, implementation } of solutions) {
+    bench(name, () => {
+      for (const {
+        input: { nums, target },
+      } of TEST_DATA) {
+        implementation(nums, target);
+      }
+    });
+  }
 });

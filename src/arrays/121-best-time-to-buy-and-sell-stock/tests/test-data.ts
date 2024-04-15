@@ -1,4 +1,4 @@
-import type { InputTestData } from "@typings/input-data";
+import type { InputTestData } from "shared/typings/input-data";
 
 export const TEST_DATA: InputTestData<number[], number>[] = [
   // Basic cases:

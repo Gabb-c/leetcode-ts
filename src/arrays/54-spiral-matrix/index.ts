@@ -1,4 +1,4 @@
-import type { Matrix } from "@typings/matrix";
+import type { Matrix } from "shared/typings/matrix";
 
 /**
  * Returns the elements of the input matrix in spiral order.

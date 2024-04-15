@@ -1,7 +1,7 @@
 import { bench, describe } from "vitest";
 
-import type { InputTestData } from "@typings/input-data";
-import type { Matrix } from "@typings/matrix";
+import type { InputTestData } from "shared/typings/input-data";
+import type { Matrix } from "shared/typings/matrix";
 import { spiralOrder } from "..";
 
 const TEST_DATA: InputTestData<Matrix<number>, number[]> = {

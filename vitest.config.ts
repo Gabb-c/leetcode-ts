@@ -7,6 +7,8 @@ export default defineConfig({
     globals: true,
     coverage: {
       provider: "v8",
+      exclude: ["**/*.bench.ts", ".lintstagedrc.js", "commitlint.config.js"],
     },
+    logHeapUsage: true,
   },
 });
