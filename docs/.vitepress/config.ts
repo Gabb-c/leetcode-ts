@@ -1,37 +1,33 @@
-import { withPwa } from "@vite-pwa/vitepress";
 import { defineConfig } from "vitepress";
 import { author, license } from "../../package.json";
 
 // https://vitepress.dev/reference/site-config
-export default withPwa(
-  defineConfig({
-    title: "LeetCode-ts",
-    description: "Mastering Coding Challenges in TypeScript",
-    themeConfig: {
-      siteTitle: "LeetCode-ts",
-      nav: [{ text: "Home", link: "/" }],
-      sidebar: [],
-      socialLinks: [
-        {
-          icon: "github",
-          link: "https://github.com/Gabb-c/leetcode-ts",
-          ariaLabel: "Repository link",
-        },
-        {
-          icon: "linkedin",
-          link: "https://www.linkedin.com/in/gabriel-da-cunha/",
-          ariaLabel: "LinkedIn link",
-        },
-      ],
-      search: {
-        provider: "local",
+export default defineConfig({
+  title: "LeetCode-ts",
+  description: "Mastering Coding Challenges in TypeScript",
+  themeConfig: {
+    siteTitle: "LeetCode-ts",
+    nav: [{ text: "Home", link: "/" }],
+    sidebar: [],
+    socialLinks: [
+      {
+        icon: "github",
+        link: "https://github.com/Gabb-c/leetcode-ts",
+        ariaLabel: "Repository link",
       },
-      footer: {
-        message: `Made with ❤️ Released under the ${license} License`,
-        copyright: `Copyright © 2024-present ${author.name}`,
+      {
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/gabriel-da-cunha/",
+        ariaLabel: "LinkedIn link",
       },
+    ],
+    search: {
+      provider: "local",
     },
-    cleanUrls: true,
-    pwa: { registerType: "autoUpdate" },
-  }),
-);
+    footer: {
+      message: `Made with ❤️ Released under the ${license} License`,
+      copyright: `Copyright © 2024-present ${author.name}`,
+    },
+  },
+  cleanUrls: true,
+});
