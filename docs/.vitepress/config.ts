@@ -1,16 +1,16 @@
 import { defineConfig } from "vitepress";
+import { author, license } from "../../package.json";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "LeetCode-ts",
-  description: "A VitePress Site",
+  description: "Mastering Coding Challenges in TypeScript",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    siteTitle: "LeetCode-ts",
     nav: [
       { text: "Home", link: "/" },
       { text: "Examples", link: "/markdown-examples" },
     ],
-
     sidebar: [
       {
         text: "Examples",
@@ -20,7 +20,14 @@ export default defineConfig({
         ],
       },
     ],
-
-    socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/Gabb-c/leetcode-ts" }],
+    search: {
+      provider: "local",
+    },
+    footer: {
+      message: `Made with ❤️<br/>Released under the ${license} License`,
+      copyright: `Copyright © 2024-present ${author.name}`,
+    },
   },
+  cleanUrls: true,
 });
