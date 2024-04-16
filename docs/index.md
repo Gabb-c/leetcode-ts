@@ -3,21 +3,29 @@ layout: home
 
 hero:
   name: "LeetCode-ts"
-  text: "Mastering Coding Challenges in TypeScript"
-  tagline: LeetCode problems implemented in TypeScript
+  text: "Coding Challenges <br>In TypeScript"
+  tagline: Mastering LeetCode in TypeScript
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/Gabb-c/leetcode-ts
 
 features:
-  - title: Efficient
-    details: Optimized solutions for time and space complexity.
-  - title: Explained
-    details: Detailed explanations break down the problem and approach.
-  - title: Tested
-    details: Unit tests ensure the solution's correctness.
+  - icon: 🌱
+    title: Efficient
+    details: Optimized solutions with minimal time and space complexity.
+  - icon: 📜
+    title: Explained
+    details: In-depth breakdowns of problems and approaches for comprehensive understanding.
+  - icon: 🧪
+    title: Tested
+    details: Ensures solutions correctness through various unit and benchmark tests.
 ---
+
+---
+
+::: warning 🚧 In Development 🚧
+Please note that **this project is currently in its early stages of development**. 
+While some solutions are complete, others might be under construction or missing entirely. 
+The documentation is also being built alongside the code, and a contributing guide is on the way.
+:::
