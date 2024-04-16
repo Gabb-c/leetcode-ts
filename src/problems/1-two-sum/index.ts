@@ -60,7 +60,7 @@ const bruteForce = (nums: number[], target: number): number[] => {
 };
 
 export const TWO_SUM: LeetcodeProblem<number[]> = {
-  name: "1. Two Sum",
+  name: "Two Sum",
   code: "1",
   tags: ["Array"],
   solutions: [

@@ -1,7 +1,7 @@
 import type { InputTestData } from "shared/typings/input-data";
 
 export const TEST_DATA: InputTestData<{ nums: number[]; target: number }, number[]>[] = [
-  // Basic cases within constraints:
+  // Basic cases within constraints
   { input: { nums: [2, 7, 11, 15], target: 9 }, expected: [0, 1] },
   { input: { nums: [3, 2, 4], target: 6 }, expected: [1, 2] },
   { input: { nums: [5, 5], target: 10 }, expected: [0, 1] },
@@ -15,11 +15,11 @@ export const TEST_DATA: InputTestData<{ nums: number[]; target: number }, number
     expected: [18, 19],
   },
 
-  // Test cases at element value limits:
+  // Test cases at element value limits
   { input: { nums: [-1000000000, 0, 1000000000], target: 0 }, expected: [0, 2] },
   { input: { nums: [1000000000, 999999999], target: 1999999999 }, expected: [0, 1] },
 
-  // Test cases with valid solutions but near value limits:
+  // Test cases with valid solutions but near value limits
   { input: { nums: [-999999999, 1], target: -999999998 }, expected: [0, 1] },
   { input: { nums: [999999998, 1], target: 999999999 }, expected: [0, 1] },
 ];
