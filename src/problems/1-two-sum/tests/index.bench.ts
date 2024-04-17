@@ -1,4 +1,4 @@
-import { bench, describe } from "vitest";
+import { bench } from "vitest";
 
 import { TWO_SUM } from "..";
 import { TEST_DATA } from "./test-data";

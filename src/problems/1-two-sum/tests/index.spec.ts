@@ -1,5 +1,3 @@
-import { describe, expect, it } from "vitest";
-
 import { TWO_SUM } from "..";
 import { TEST_DATA } from "./test-data";
 

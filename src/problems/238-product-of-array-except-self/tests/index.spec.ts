@@ -1,5 +1,3 @@
-import { describe, expect, it } from "vitest";
-
 import { productExceptSelf } from "..";
 import { TEST_DATA } from "./test-data";
 

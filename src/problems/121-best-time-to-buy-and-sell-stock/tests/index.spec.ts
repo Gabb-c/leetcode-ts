@@ -1,5 +1,3 @@
-import { describe, expect, it } from "vitest";
-
 import { maxProfit } from "..";
 import { TEST_DATA } from "./test-data";
 
