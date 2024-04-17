@@ -1,4 +1,5 @@
 import type { InputTestData } from "@typings/input-data";
+import { generateArraysForBenchmark } from "@utils/generate-arrays";
 
 export const TEST_DATA: InputTestData<number[], number[]>[] = [
   // Test cases with different array sizes
@@ -7,6 +8,16 @@ export const TEST_DATA: InputTestData<number[], number[]>[] = [
   { input: [4, 3, 2, 1, 0], expected: [0, 1, 2, 3, 4] },
   { input: [10, 5, 15, 2, 8], expected: [2, 5, 8, 10, 15] },
   { input: [100, 50, 200, 1, 75], expected: [1, 50, 75, 100, 200] },
+
+  // Larger arrays
+  {
+    input: Array.from({ length: 5000 }, (_, i) => i),
+    expected: Array.from({ length: 5000 }, (_, i) => i),
+  },
+  {
+    input: Array.from({ length: 5000 }, (_, i) => 5000 - i),
+    expected: Array.from({ length: 5000 }, (_, i) => 5000 - i).reverse(),
+  },
 
   // Test cases with duplicate elements
   { input: [3, 1, 2, 3, 1], expected: [1, 1, 2, 3, 3] },
@@ -19,3 +30,5 @@ export const TEST_DATA: InputTestData<number[], number[]>[] = [
   // Test cases with empty array
   { input: [], expected: [] },
 ];
+
+export const BENCHMARK_TEST_DATA = generateArraysForBenchmark(1000);
